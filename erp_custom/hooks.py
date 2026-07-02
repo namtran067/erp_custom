@@ -1,9 +1,13 @@
 app_name = "erp_custom"
-app_title = "ERP Custom"
+app_title = "Jemmia ERP"
 app_publisher = "Jemmia"
 app_description = "ERP Custom"
 app_email = "nhatnam160701@gmail.com"
 app_license = "mit"
+
+# Branding — logo used by navbar, apps-switcher and login page
+# (see frappe navbar_settings.get_app_logo for the priority chain).
+app_logo_url = "/assets/erp_custom/images/logo.svg"
 
 # Apps
 # ------------------
@@ -25,7 +29,7 @@ required_apps = ["erpnext"]
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/erp_custom/css/erp_custom.css"
+app_include_css = "/assets/erp_custom/css/erp_custom.css"
 # app_include_js = "/assets/erp_custom/js/erp_custom.js"
 
 # include js, css files in header of web template
@@ -43,7 +47,7 @@ required_apps = ["erpnext"]
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Customer": "public/js/customer.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -86,7 +90,7 @@ required_apps = ["erpnext"]
 # ------------
 
 # before_install = "erp_custom.install.before_install"
-# after_install = "erp_custom.install.after_install"
+after_install = "erp_custom.install.branding.apply"
 
 # Uninstallation
 # ------------

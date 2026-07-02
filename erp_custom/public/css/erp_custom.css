@@ -1,0 +1,19 @@
+/* erp_custom — Jemmia brand theme override.
+ * Loaded via `app_include_css` hook (AFTER frappe's compiled CSS),
+ * so re-declaring the CSS variables here takes effect by source order.
+ * Change the brand in ONE place: the `--jemmia-brand` variable below. */
+
+:root,
+[data-theme="light"] {
+	--jemmia-brand: #0ea5a4; /* <<< đổi màu brand tại đây */
+	--primary: var(--jemmia-brand);
+	--primary-color: var(--jemmia-brand);
+	--btn-primary: var(--jemmia-brand);
+	--navbar-bg: #ffffff;
+}
+
+/* Logo sizing in the navbar */
+.navbar-home img,
+.navbar-brand img {
+	height: 28px;
+}
